@@ -4,7 +4,6 @@ class Categories(object):
     """
 
     def __init__(self, applications , title):
-        super(Categories, self).__init__()
         self.title = title
         self.applications = applications
 

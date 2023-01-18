@@ -2,7 +2,6 @@ class SearchResultView(object):
     """docstring for SearchResultView."""
 
     def __init__(self, applications):
-        super(SearchResultView, self).__init__()
         self.applications = applications
 
     def display():
@@ -13,4 +12,3 @@ class SearchResultView(object):
 
     def appPressHandler(index):
         pass
-        

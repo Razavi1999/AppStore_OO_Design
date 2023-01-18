@@ -5,7 +5,6 @@ class Comment(object):
     """
 
     def __init__(self, name , description , date):
-        super(Comment, self).__init__()
         self.name = name
         self.description = description
         self.date = date

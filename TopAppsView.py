@@ -4,7 +4,6 @@ class TopAppsView(object):
     """
 
     def __init__(self, applications):
-        super(TopAppsView, self).__init__()
         self.applications = applications
 
     def display():

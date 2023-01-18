@@ -15,14 +15,13 @@ class  Application(object):
         self.description = description
         self.type = type
         self.price = price
-        self.comments = comments
+        self.comments = []
         self.downloads_rate = downloads_rate
         self.user_views_rate = user_views_rate
-        self.downloaded_users = downloaded_users
-        self.viewed_users = viewed_users
+        self.downloaded_users = []
+        self.viewed_users = []
         self.size = size
         self.developer = developer
-        super(Application, self).__init__()
 
     def display():
         pass
