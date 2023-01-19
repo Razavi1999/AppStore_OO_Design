@@ -1,11 +1,9 @@
-from search_box import SearchBox
-
+from SearchResultView import SearchResultView
 
 class HomePage:
-
-    def __init__(self) -> None:
+    def __init__(self , SearchResultView) -> None:
         self.advertisments = []
-        self.search_box = ()
+        self.search_box = SearchResultView()
         self.top_apps_view = []
         self.categories = []
 
