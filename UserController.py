@@ -1,4 +1,4 @@
-class UserController(object):
+class UserController:
     """docstring for UserController."""
 
     def __init__(self):

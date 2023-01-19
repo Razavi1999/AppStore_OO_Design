@@ -1,4 +1,4 @@
-class  Application(object):
+class  Application:
     """docstring for (Application)
     Application class with Attributes and Functions
     ."""
