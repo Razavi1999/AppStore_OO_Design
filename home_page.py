@@ -1,13 +1,13 @@
 from SearchResultView import SearchResultView
 
 class HomePage:
-    def __init__(self) -> None:
+    def __init__(self):
         self.advertisements = []
-        self.search_box = SearchResultView(applications=[])
+        self.search_box = SearchResultView()
         self.top_apps_view = []
         self.categories = []
 
-    def display(self):
+    def display(self, **kwargs):
         pass
 
     def add_advertisement(self, **kwargs):

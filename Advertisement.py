@@ -1,9 +1,8 @@
 class Advertisement(object):
     """Advertisement in the HomePage of AppStore."""
 
-    def __init__(self, arg):
-        self.advertisement = ()
-        self.title = ""
+    def __init__(self, **kwargs):
+        pass
 
-    def display():
+    def display(self, **kwargs):
         pass

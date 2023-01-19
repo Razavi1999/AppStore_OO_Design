@@ -4,5 +4,5 @@ class UserController(object):
     def __init__(self):
         self.users = []
 
-    def signUp(name , image):
+    def signUp(self, **kwargs):
         pass

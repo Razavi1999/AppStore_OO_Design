@@ -1,17 +1,17 @@
-class Categories(object):
+class Categories:
     """docstring for Categories.
         each Application should be in one Category
     """
 
-    def __init__(self, applications , title):
+    def __init__(self , title):
         self.title = title
-        self.applications = applications
+        self.applications = []
 
-    def display():
+    def display(self, **kwargs):
         pass
 
-    def add_app():
+    def add_app(self, **kwargs):
         pass
 
-    def delete_app():
+    def delete_app(self, **kwargs):
         pass

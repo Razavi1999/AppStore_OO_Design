@@ -1,4 +1,4 @@
-class User(object):
+class User:
     """docstring for User."""
 
     def __init__(self, installedApps , name , image , email):
@@ -7,5 +7,5 @@ class User(object):
         self.installedApps = installedApps
         self.image = image
 
-    def download(self , application):
+    def download(self, **kwargs):
         pass

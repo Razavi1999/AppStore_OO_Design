@@ -1,8 +1,8 @@
-class Developer(object):
+class Developer:
     """docstring for Developer."""
 
-    def __init__(self, arg):
-        self.arg = arg
+    def __init__(self, **kwargs):
+        pass
 
-    def UpdateApplication(application):
+    def UpdateApplication(self, **kwargs):
         pass

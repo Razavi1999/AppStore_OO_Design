@@ -1,16 +1,16 @@
-class TopAppsView(object):
+class TopAppsView:
     """docstring for TopAppsView.
      TopAppsView section in HomePage
     """
 
-    def __init__(self, applications):
-        self.applications = applications
+    def __init__(self):
+        self.applications = []
 
-    def display():
+    def display(self, **kwargs):
         pass
 
-    def insert_application():
+    def insert_application(self, **kwargs):
         pass
 
-    def delete_application():
+    def delete_application(self, **kwargs):
         pass

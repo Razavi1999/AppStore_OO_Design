@@ -3,12 +3,7 @@ class  Application(object):
     Application class with Attributes and Functions
     ."""
 
-    def __init__(self , icon , images , trailer ,
-                description , type , price , comments ,
-                downloaded_users , viewed_users ,
-                 downloads_rate , user_views_rate ,
-                 size , developer
-                 ):
+    def __init__(self , icon , images , trailer, description , type , price, size , developer):
         self.icon = icon
         self.images = images
         self.trailer = trailer
@@ -16,27 +11,27 @@ class  Application(object):
         self.type = type
         self.price = price
         self.comments = []
-        self.downloads_rate = downloads_rate
-        self.user_views_rate = user_views_rate
+        self.downloads_rate = 0
+        self.user_views_rate = 0
         self.downloaded_users = []
         self.viewed_users = []
         self.size = size
         self.developer = developer
 
-    def display():
+    def display(self, **kwargs):
         pass
 
-    def insert_comment(user):
+    def insert_comment(self, **kwargs):
         pass
 
-    def delete_comment(user):
+    def delete_comment(self, **kwargs):
         pass
 
-    def install():
+    def install(self, **kwargs):
         pass
 
-    def update_views():
+    def update_views(self, **kwargs):
         pass
 
-    def update_downloads():
+    def update_downloads(self, **kwargs):
         pass

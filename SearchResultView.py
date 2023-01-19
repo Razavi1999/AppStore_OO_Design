@@ -1,14 +1,14 @@
-class SearchResultView(object):
+class SearchResultView:
     """docstring for SearchResultView."""
 
-    def __init__(self, applications):
-        self.applications = applications
+    def __init__(self):
+        self.applications = []
 
-    def display():
+    def display(self, **kwargs):
         pass
 
-    def search(name , user):
+    def search(self, **kwargs):
         pass
 
-    def appPressHandler(index):
+    def appPressHandler(self, **kwargs):
         pass
