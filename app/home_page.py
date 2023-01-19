@@ -1,4 +1,4 @@
-from SearchResultView import SearchResultView
+from search_result_view import SearchResultView
 
 class HomePage:
     def __init__(self):

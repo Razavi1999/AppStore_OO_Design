@@ -1,5 +1,5 @@
 from home_page import HomePage
-from UserController import UserController
+from user_controller import UserController
 
 
 if __name__ == '__main__':
