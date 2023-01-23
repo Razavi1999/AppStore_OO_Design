@@ -19,10 +19,20 @@ class  Application:
         self.developer = developer
 
     def display(self, **kwargs):
-        pass
+        print('---------------- Application -------------------------')
+        print('---------------- below is description of Application ------------------')
+        for each in **kwargs:
+            print(each)
 
     def insert_comment(self, **kwargs):
-        pass
+        comment = Comment()
+
+        for k, v in kwargs.items():
+            comment.k = v
+
+        self.comments.append(comment)
+        print('-------- new comment inserted ----------')
+
 
     def delete_comment(self, **kwargs):
         pass
