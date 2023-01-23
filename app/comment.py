@@ -4,7 +4,6 @@ class Comment:
         and that user can delete his or her Comment
     """
 
-    def __init__(self, name , description , date):
-        self.name = name
+    def __init__(self , description , date):
         self.description = description
         self.date = date

@@ -7,5 +7,5 @@ class User:
         self.installedApps = []
         self.image = image
 
-    def download(self, **kwargs):
-        pass
+    def download(self, application):
+        self.installedApps.append(application)

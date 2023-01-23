@@ -1,23 +1,23 @@
-# from main import home_page
-
 class SearchResultView:
     """docstring for SearchResultView."""
 
     def __init__(self):
         self.applications = []
 
-    def display(self, **kwargs):
+    def display(self):
         print('---- SearchResultView -----')
         for each in self.applications:
-            print(each.name)
+            each.display()
         print('----- End SearchResultView -----')
 
     def search(self , categories, wanted):
         for category in categories:
             for app in category.applications:
-                if(wanted == app.name):
+                if(wanted in app.name):
                     self.applications.append(app)
+                    self.display()
 
+        return self.applications
 
 
     def appPressHandler(self, index , user):

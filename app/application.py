@@ -24,14 +24,14 @@ class  Application:
     def display(self):
         print('---------------- Application -------------------------')
         print('---------------- below is description of Application ------------------')
-        print(f' icon : {self.icon} , description : {self.description} , type : {self.type} , price : {self.price} , developer : {self.developer} , size : {self.size} ,')
-
+        print(f' name : {self.name} , icon : {self.icon} , description : {self.description} , type : {self.type} , price : {self.price} , developer : {self.developer} , size : {self.size} ,')
+        print('\n \n')
         print('---- Comments ----')
         for each in self.comments:
             print(each.description)
 
-    def insert_comment(self, user , name , description , date):
-        comment = Comment(name , description , date)
+    def insert_comment(self, user  , description , date):
+        comment = Comment(description , date)
         self.comments.append(comment)
         print('-------- new comment inserted ----------')
         print()
@@ -39,8 +39,11 @@ class  Application:
         self.display()
         return comment
 
-    def delete_comment(self, comment):
-        self.comments.remove(comment)
+    def delete_comment(self, description):
+        for each in self.comments :
+            if each.description == description:
+                self.comments.remove(each)
+
 
     def install(self, user):
         self.downloaded_users.append(user)

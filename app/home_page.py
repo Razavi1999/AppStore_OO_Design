@@ -1,6 +1,7 @@
 from search_result_view import SearchResultView
 from categories import Categories
 from advertisement import Advertisement
+from top_apps_view import TopAppsView
 
 class HomePage:
     def __init__(self):
@@ -26,6 +27,7 @@ class HomePage:
 
         print('------ info ended ------')
 
+
     def add_advertisement(self, title , image):
         advertisement = Advertisement(title , image)
         self.advertisements.append(advertisement)
@@ -39,4 +41,8 @@ class HomePage:
         return category
 
     def search(self , name):
-        self.search_box.search(self.categories , name)
+        return self.search_box.search(self.categories , name)
+
+    def insert_app_to_topAppsView(self):
+        topAppsView = TopAppsView()
+        topAppsView.insert_application(self.categories)
