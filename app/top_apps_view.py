@@ -1,3 +1,5 @@
+import setting.py
+
 class TopAppsView:
     """docstring for TopAppsView.
      TopAppsView section in HomePage
@@ -7,10 +9,21 @@ class TopAppsView:
         self.applications = []
 
     def display(self, **kwargs):
-        pass
+        print('---- TopAppsView ---- ')
 
-    def insert_application(self, **kwargs):
-        pass
+        for each in self.applications:
+            print(each.name)
 
-    def delete_application(self, **kwargs):
-        pass
+        print('---- End TopAppsView ----')
+
+    def insert_application(self):
+        max = 0
+
+        for app in allApplications:
+            if app.downloads_rate > max:
+                self.applications.append(app)
+                max = app.downloads_rate
+        self.display()
+
+    def delete_application(self, application):
+        self.applications.remove(application)

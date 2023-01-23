@@ -1,4 +1,6 @@
 from search_result_view import SearchResultView
+from categories import Categories
+from advertisement import Advertisement
 
 class HomePage:
     def __init__(self):
@@ -8,10 +10,33 @@ class HomePage:
         self.categories = []
 
     def display(self, **kwargs):
-        pass
+        print('------ HomePage info --------')
 
-    def add_advertisement(self, **kwargs):
-        pass
+        print('------ categories ------')
+        for each in self.categories :
+            print(each.title)
 
-    def add_category(self, **kwargs):
-        pass
+        print('------ top_apps_view ------')
+        for each in self.top_apps_view:
+            print(each.name)
+
+        print('------ advertisments ------')
+        for each in self.advertisements:
+            print(each.title)
+
+        print('------ info ended ------')
+
+    def add_advertisement(self, title , image):
+        advertisement = Advertisement(title , image)
+        self.advertisements.append(advertisement)
+        print(f'*** New Advertisement {advertisement.title} added ***')
+        return advertisement
+
+    def add_category(self, title):
+        category = Categories(title)
+        self.categories.append(category)
+        print(f'*** New Category {category.title} added ***')
+        return category
+
+    def search(self , name):
+        self.search_box.search(self.categories , name)

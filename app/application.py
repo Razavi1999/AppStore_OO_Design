@@ -1,10 +1,13 @@
+from comment import Comment
+
 class  Application:
     """docstring for (Application)
     Application class with Attributes and Functions
     ."""
 
-    def __init__(self , icon , images , trailer, description , type , price, size , developer):
+    def __init__(self , name , icon , images , trailer, description , type , price, size , developer):
         self.icon = icon
+        self.name = name
         self.images = images
         self.trailer = trailer
         self.description = description
@@ -18,30 +21,35 @@ class  Application:
         self.size = size
         self.developer = developer
 
-    def display(self, **kwargs):
+    def display(self):
         print('---------------- Application -------------------------')
         print('---------------- below is description of Application ------------------')
-        for each in **kwargs:
-            print(each)
+        print(f' icon : {self.icon} , description : {self.description} , type : {self.type} , price : {self.price} , developer : {self.developer} , size : {self.size} ,')
 
-    def insert_comment(self, **kwargs):
-        comment = Comment()
+        print('---- Comments ----')
+        for each in self.comments:
+            print(each.description)
 
-        for k, v in kwargs.items():
-            comment.k = v
-
+    def insert_comment(self, user , name , description , date):
+        comment = Comment(name , description , date)
         self.comments.append(comment)
         print('-------- new comment inserted ----------')
+        print()
+        print()
+        self.display()
+        return comment
 
+    def delete_comment(self, comment):
+        self.comments.remove(comment)
 
-    def delete_comment(self, **kwargs):
-        pass
+    def install(self, user):
+        self.downloaded_users.append(user)
+        print(f'{user.name} installed {self.name}')
 
-    def install(self, **kwargs):
-        pass
+    def update_views(self, user):
+        self.user_views_rate = self.user_views_rate + 1
+        self.viewed_users.append(user)
 
-    def update_views(self, **kwargs):
-        pass
-
-    def update_downloads(self, **kwargs):
-        pass
+    def update_downloads(self, user):
+        self.downloads_rate = self.downloads_rate + 1
+        self.downloaded_users.append(user)

@@ -1,5 +1,7 @@
+from application import Application
+
 class Categories:
-    """docstring for Categories.
+    """ docstring for Categories.
         each Application should be in one Category
     """
 
@@ -8,10 +10,22 @@ class Categories:
         self.applications = []
 
     def display(self, **kwargs):
-        pass
+        print('------ Category info --------')
+        print('------ applications ------')
+        for each in self.applications :
+            print(each.name)
+        print('------ info ended ------')
 
-    def add_app(self, **kwargs):
-        pass
+    def add_app(self, name , icon , images , trailer, description , type , price, size , developer):
+        application = Application(
+            name , icon , images ,
+            trailer, description , type ,
+            price, size , developer
+        )
+        self.applications.append(application)
+        # allApplications.append(application)
+        return application
 
-    def delete_app(self, **kwargs):
-        pass
+    def delete_app(self, application):
+        self.applications.remove(application)
+        # allApplications.remove(application)
