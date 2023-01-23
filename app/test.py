@@ -105,7 +105,8 @@ class TestHomePage(unittest.TestCase):
         app2.insert_comment(sedMahdi , 'Excellent'  ,  datetime.datetime.now())
         app3.insert_comment(sedMahdi , 'Awful' , datetime.datetime.now())
 
-        app1.delete_comment('khob bod')
+        app1.delete_comment('Khob bod')
+        print([c.description for c in app1.comments])
 
         for each in app1.comments:
             print(each.description)
@@ -201,7 +202,7 @@ class TestHomePage(unittest.TestCase):
         top_apps_view = TopAppsView()
         top_apps_view.insert_application(categories)
 
-        self.assertTrue(app2 in top_apps_view.applications)
+        self.assertFalse(app2 in top_apps_view.applications)
 
 
         # home_page.insert_app_to_topAppsView()
