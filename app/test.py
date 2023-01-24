@@ -4,6 +4,7 @@ from home_page import HomePage
 from user_controller import UserController
 from search_result_view import SearchResultView
 from top_apps_view import TopAppsView
+from type import Type
 
 class TestHomePage(unittest.TestCase):
     """docstring for TestHomePage."""
@@ -42,12 +43,15 @@ class TestHomePage(unittest.TestCase):
         category2 = home_page.add_category('cat2')
         category3 = home_page.add_category('cat3')
 
-        app1 = category1.add_app('app1' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app2 = category2.add_app('app2' , '77' , '88' , '92' ,'434' , '232' , '212' ,'343' , '212')
-        app3 = category1.add_app('app3' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app4 = category2.add_app('CafeBazar' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app5 = category1.add_app('Snapp!' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app6 = category2.add_app('SnappFood' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
+        user_controller = UserController()
+        developer = user_controller.create_developer('developer1', '/img')
+
+        app1 = category1.add_app('app1' , '/imgs/icon1.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app2 = category2.add_app('app2' , '/imgs/icon2.png' , '/img1' , '/t1' ,'434' , Type(1) , 0 , 10000 , developer)
+        app3 = category1.add_app('app3' , '/imgs/icon3.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app4 = category2.add_app('CafeBazar' , '/imgs/icon4.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
+        app5 = category1.add_app('Snapp!' , '/imgs/icon5.png' , '/img1' , '/t1' ,'/t1' , Type(1) , 1000 , 10000 , developer)
+        app6 = category2.add_app('SnappFood' , '/imgs/icon6.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
 
 
     def test_insert_comment(self):

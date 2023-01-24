@@ -1,4 +1,5 @@
 from user import User
+from developer import Developer
 
 class UserController:
     """docstring for UserController."""
@@ -11,3 +12,7 @@ class UserController:
         print(f'New User {user.name} created.')
         self.users.append(user)
         return user
+
+    def create_developer(self, name, icon):
+        return Developer(name, icon)
+
