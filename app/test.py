@@ -65,13 +65,15 @@ class TestHomePage(unittest.TestCase):
         print('user_controller is available to handle your users')
         sedMahdi = user_controller.signUp('sedMahdi' , 'razavismhr@gmail.com' , '')
 
+        user_controller = UserController()
+        developer = user_controller.create_developer('developer1', '/img')
 
-        app1 = category1.add_app('app1' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app2 = category2.add_app('app2' , '77' , '88' , '92' ,'434' , '232' , '212' ,'343' , '212')
-        app3 = category1.add_app('app3' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app4 = category2.add_app('CafeBazar' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app5 = category1.add_app('Snapp!' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app6 = category2.add_app('SnappFood' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
+        app1 = category1.add_app('app1' , '/imgs/icon1.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app2 = category2.add_app('app2' , '/imgs/icon2.png' , '/img1' , '/t1' ,'434' , Type(1) , 0 , 10000 , developer)
+        app3 = category1.add_app('app3' , '/imgs/icon3.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app4 = category2.add_app('CafeBazar' , '/imgs/icon4.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
+        app5 = category1.add_app('Snapp!' , '/imgs/icon5.png' , '/img1' , '/t1' ,'/t1' , Type(1) , 1000 , 10000 , developer)
+        app6 = category2.add_app('SnappFood' , '/imgs/icon6.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
 
         app1.insert_comment(sedMahdi   , 'بسیار عالی بود'  ,  datetime.datetime.now())
         app2.insert_comment(sedMahdi  , 'Excellent'  ,  datetime.datetime.now())
@@ -96,12 +98,15 @@ class TestHomePage(unittest.TestCase):
         Mojtaba = user_controller.signUp('Mojtaba' , 'mojtabaSafari@gmail.com' , '')
         MohamadReza = user_controller.signUp('MohammadReza' , 'mirshamsi@gmail.com' , '')
 
-        app1 = category1.add_app('app1' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app2 = category2.add_app('app2' , '77' , '88' , '92' ,'434' , '232' , '212' ,'343' , '212')
-        app3 = category1.add_app('app3' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app4 = category2.add_app('CafeBazar' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app5 = category1.add_app('Snapp!' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app6 = category2.add_app('SnappFood' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
+        user_controller = UserController()
+        developer = user_controller.create_developer('developer1', '/img')
+
+        app1 = category1.add_app('app1' , '/imgs/icon1.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app2 = category2.add_app('app2' , '/imgs/icon2.png' , '/img1' , '/t1' ,'434' , Type(1) , 0 , 10000 , developer)
+        app3 = category1.add_app('app3' , '/imgs/icon3.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app4 = category2.add_app('CafeBazar' , '/imgs/icon4.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
+        app5 = category1.add_app('Snapp!' , '/imgs/icon5.png' , '/img1' , '/t1' ,'/t1' , Type(1) , 1000 , 10000 , developer)
+        app6 = category2.add_app('SnappFood' , '/imgs/icon6.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
 
         app1.insert_comment(sedMahdi   , 'بسیار عالی بود'  ,  datetime.datetime.now())
         app1.insert_comment(Mojtaba  , 'Khob bod' , datetime.datetime.now())
@@ -140,13 +145,16 @@ class TestHomePage(unittest.TestCase):
         advertisement3 = home_page.add_advertisement("Parjak" , "")
 
         home_page.display()
+        
+        user_controller = UserController()
+        developer = user_controller.create_developer('developer1', '/img')
 
-        app1 = category1.add_app('app1' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app2 = category2.add_app('app2' , '77' , '88' , '92' ,'434' , '232' , '212' ,'343' , '212')
-        app3 = category1.add_app('app3' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app4 = category2.add_app('CafeBazar' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app5 = category1.add_app('Snapp!' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
-        app6 = category2.add_app('SnappFood' , '1' , '2' , '3' ,'55' , '44' , '223' ,'66' , '77')
+        app1 = category1.add_app('app1' , '/imgs/icon1.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app2 = category2.add_app('app2' , '/imgs/icon2.png' , '/img1' , '/t1' ,'434' , Type(1) , 0 , 10000 , developer)
+        app3 = category1.add_app('app3' , '/imgs/icon3.png' , '/img1' , '/t1' ,'55' , Type(1) , 0 , 10000 , developer)
+        app4 = category2.add_app('CafeBazar' , '/imgs/icon4.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
+        app5 = category1.add_app('Snapp!' , '/imgs/icon5.png' , '/img1' , '/t1' ,'/t1' , Type(1) , 1000 , 10000 , developer)
+        app6 = category2.add_app('SnappFood' , '/imgs/icon6.png' , '/img1' , '/t1' ,'55' , Type(2) , 0 , 10000 , developer)
 
         app1.insert_comment(sedMahdi   , 'بسیار عالی بود'  ,  datetime.datetime.now())
         app2.insert_comment(sedMahdi  , 'Excellent'  ,  datetime.datetime.now())
