@@ -23,9 +23,7 @@ class Categories:
             price, size , developer
         )
         self.applications.append(application)
-        # allApplications.append(application)
         return application
 
     def delete_app(self, application):
         self.applications.remove(application)
-        # allApplications.remove(application)

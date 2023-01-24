@@ -101,7 +101,6 @@ class TestHomePage(unittest.TestCase):
 
         app1.insert_comment(sedMahdi   , 'بسیار عالی بود'  ,  datetime.datetime.now())
         app1.insert_comment(Mojtaba  , 'Khob bod' , datetime.datetime.now())
-        # app1.insert_comment()
         app2.insert_comment(sedMahdi , 'Excellent'  ,  datetime.datetime.now())
         app3.insert_comment(sedMahdi , 'Awful' , datetime.datetime.now())
 
@@ -204,8 +203,6 @@ class TestHomePage(unittest.TestCase):
 
         self.assertFalse(app2 in top_apps_view.applications)
 
-
-        # home_page.insert_app_to_topAppsView()
 
 
 if __name__ == '__main__':

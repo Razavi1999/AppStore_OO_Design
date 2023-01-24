@@ -5,7 +5,6 @@ import datetime
 
 if __name__ == '__main__':
     # initialize home page
-
     home_page = HomePage()
     print('home_page is available to handle your system')
 
