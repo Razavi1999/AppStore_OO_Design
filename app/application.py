@@ -31,12 +31,8 @@ class  Application:
             print(each.description)
 
     def insert_comment(self, user  , description , date):
-        comment = Comment(description , date)
+        comment = Comment(user, description , date)
         self.comments.append(comment)
-        print('-------- new comment inserted ----------')
-        print()
-        print()
-        self.display()
         return comment
 
     def delete_comment(self, description):
@@ -47,12 +43,10 @@ class  Application:
 
     def install(self, user):
         self.downloaded_users.append(user)
+        self.downloads_rate = self.downloads_rate + 1
+        user.download(self)
         print(f'{user.name} installed {self.name}')
 
     def update_views(self, user):
-        self.user_views_rate = self.user_views_rate + 1
+        self.user_views_rate += + 1
         self.viewed_users.append(user)
-
-    def update_downloads(self, user):
-        self.downloads_rate = self.downloads_rate + 1
-        self.downloaded_users.append(user)

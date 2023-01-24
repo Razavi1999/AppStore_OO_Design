@@ -15,13 +15,10 @@ class TopAppsView:
         print('---- End TopAppsView ----')
 
     def insert_application(self , categories):
-        max = 0
-
         for category in categories:
             for app in category.applications:
-                if app.downloads_rate > max:
+                if app.downloads_rate > 5:
                     self.applications.append(app)
-                    max = app.downloads_rate
         self.display()
 
     def delete_application(self, application):

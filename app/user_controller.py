@@ -9,6 +9,5 @@ class UserController:
     def signUp(self, email , name , image):
         user = User(email , name , image)
         print(f'New User {user.name} created.')
-
         self.users.append(user)
         return user

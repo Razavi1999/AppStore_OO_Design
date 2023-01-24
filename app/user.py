@@ -4,8 +4,8 @@ class User:
     def __init__(self , name , image , email):
         self.email = email
         self.name = name
-        self.installedApps = []
+        self.installed_apps = []
         self.image = image
 
     def download(self, application):
-        self.installedApps.append(application)
+        self.installed_apps.append(application)
